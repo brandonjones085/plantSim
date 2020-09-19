@@ -1,19 +1,19 @@
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-3 mt-5"><h5 >Day 1</h5></div>
-        <div class="col-6 mt-5">
+        <div class="col-md-3 mt-5 col-xs-1"><h5 >Day 1</h5></div>
+        <div class="col-md-6 mt-5 col-xs-1">
 
             <!-- ECHOS PLANT HEIGHT -->
             <h4>Plant Height</h4>
-            {{this.gameService.plant.height}} inches
+            <p>{{this.gameService.plant.height}} inches</p>
         </div>
-        <div class="col-3 mt-5">
+        <div class="col-md-3 mt-5 col-xs-1">
 
             <!-- LOOPS THROUGH OBJECT VARIABLES FOR FORM -->
-            <form [formGroup]="this.gameService.variableForm" (ngSubmit)="onSubmit()" novalidate>
+            <form [formGroup]="this.gameService.variableForm"  (ngSubmit)="onSubmit()" novalidate>
                 <span *ngFor='let v of this.gameService.myVariables; let i=index;'>
                     
-                    <input class="mr-3" type="checkbox" [value]="v.value" (change)="this.gameService.onCheckboxChange($event)">{{v.name}} 
+                    <input id="myCheck" class="mr-3" type="checkbox" [checked]="v.checked" [value]="v.value" (change)="this.gameService.onCheckboxChange($event)"><h5>{{v.name}}</h5> 
                     <br>
                     <br>
                 </span>
@@ -21,7 +21,7 @@
             </form>
             <br>
         </div>
-
+ 
     </div>
 </div>
 <div class="container">

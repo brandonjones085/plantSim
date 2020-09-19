@@ -18,3 +18,24 @@ body, html{
 img{
     height: 55%; 
 }
+
+
+
+@media only screen and (max-width: 600px) {
+
+    img{
+        height: 20%; 
+    }
+
+    h5{
+        font-size: 15px; 
+    }
+
+    h4{
+        font-size: 14px; 
+    }
+    p{
+        font-size: 12px; 
+    }
+
+  }

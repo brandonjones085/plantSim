@@ -1,17 +1,18 @@
 <div class="container">
     <div class="row">
-        <div class="col-3 mt-5"><h5>Day 4</h5></div>
-        <div class="col-6 mt-5">
+        <div class="col-md-3 col-xs-1 mt-5"><h5>Day 4</h5></div>
+        <div class="col-md-6 col-xs-1 mt-5">
             <!-- ECHOS PLANT HEIGHT -->
             <h4>Plant Height</h4>
-            {{this.gameService.plant.height}} inches
+            <p>{{this.gameService.plant.height}} inches</p>
+            
         </div>
-        <div class="col-3 mt-5">
+        <div class="col-md-3 col-xs-1 mt-5">
             <!-- LOOPS THROUGH FORM VALUES -->
             <form [formGroup]="this.gameService.variableForm" (ngSubmit)="onSubmit()" novalidate>
                 <span *ngFor='let v of this.gameService.myVariables; let i=index;'>
                     
-                    <input class="mr-3" type="checkbox" [value]="v.value" (change)="this.gameService.onCheckboxChange($event)">{{v.name}} 
+                    <input class="mr-3" type="checkbox" [value]="v.value" (change)="this.gameService.onCheckboxChange($event)"><h5>{{v.name}} </h5>
             
                     <br>
                     <br>
