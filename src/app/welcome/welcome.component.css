@@ -1,0 +1,17 @@
+@import '~bootstrap/dist/css/bootstrap.min.css'; 
+
+@font-face{
+    font-family: arcade; 
+    src:url(../../assets/fonts/ARCADE_N.TTF) format("opentype")
+}
+
+
+*, p{
+    font-family: 'arcade'
+}
+
+img{
+    width: 100%
+}
+
+

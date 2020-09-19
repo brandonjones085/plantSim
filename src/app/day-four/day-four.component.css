@@ -1,0 +1,20 @@
+@import '~bootstrap/dist/css/bootstrap.min.css'; 
+
+@font-face{
+    font-family: arcade; 
+    src:url(../../assets/fonts/ARCADE_N.TTF) format("opentype")
+}
+
+
+*, p, h5{
+    font-family: 'arcade'
+}
+
+body, html{
+    background-color: blue;
+}
+
+
+img{
+    height: 55%; 
+}
