@@ -1,6 +1,6 @@
 
 pipeline{
-  agent { label 'nodejs8' }
+  agent { label 'node' }
   stages{
     stage ('checkout'){
       steps{
