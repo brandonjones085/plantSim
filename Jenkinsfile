@@ -1,9 +1,15 @@
 pipeline {
   agent {
-    docker { image 'node:latest' }
+    any
   }
-  stages {
-    stage('Install') {
+  stage {
+    stage('checkout SCM') 
+    steps {
+
+      git branch: 'master', url: 'git@github.com:brandonjones085/plantSim.git'
+    }
+  stage {
+    stage('Install') 
       steps { sh 'npm install' }
     }
 
