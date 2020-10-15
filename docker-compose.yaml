@@ -1,0 +1,36 @@
+version: '3'
+services:
+  jenkins:
+    container_name: jenkins
+    image: jenkins/docker
+    build:
+      context: jenkins
+    ports:
+      - "8080:8080"
+    volumes:
+      - $PWD/jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - net
+
+  plant: 
+    container_name: plant
+    image: plant
+    build: 
+      context: .
+    ports: 
+      - "4200:4200" 
+    networks: 
+      - net
+  # web:
+  #   container_name: web
+  #   image: ansible-web
+  #   build:
+  #     context: jenkins-ansible/web
+  #   ports:
+  #     - "80:80"
+  #   networks:
+  #     - net
+
+networks:
+  net:
